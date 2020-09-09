@@ -38,7 +38,7 @@ Agora que você já está com o template clonado, e pronto para continuar, você
 ```
 
 **Dica**: você pode utilizar a função core do Node.js `JSON.stringfy` para transformar o corpo da requisição(JSON) em uma string.
-**Dica**: você pode utilizar a lib `bcryptjs` para codificar uma string.
+**Dica 2**: você pode utilizar a lib `bcryptjs` para codificar uma string.
 
 
 ## Especificação dos testes
@@ -49,3 +49,8 @@ Para esse desafio temos os seguintes testes:
 
 - **`should be able to generate a new qrcode`**: Para que esse teste passe, sua aplicação deve permitir que uma transação seja criada, e retorne um json com a string do qrcode.
 
+Sempre que desejar rodar os testes da aplicação você pode utilizar o comando `yarn test` ou `npm run test`.
+
+## Prazo de entrega
+
+O prazo de entrega do desafio é até o dia 17/09 às 15h.
