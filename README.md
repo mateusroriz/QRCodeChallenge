@@ -19,7 +19,7 @@ Agora que você já está com o template clonado, e pronto para continuar, você
 
 - **`POST /transactions`**: A rota deve receber `payerIdentifier`, `value` e `recieverIdentifier` dentro do corpo da requisição, sendo `payerIdentifier` o identificador do pagador, `recieverIdentifier` o identificador do recebedor e `value` o valor da transação. Ao criar uma nova transação ela deve gerar uma `qrCodeString` que é uma string codificada gerada a partir das informações recebidas na rota.
 
-Exemplo de corpo da requisição:
+**Exemplo de corpo da requisição**:
 
 ```json
 {
@@ -29,10 +29,23 @@ Exemplo de corpo da requisição:
 }
 ```
 
-Exemplo de retorno:
+**Exemplo de retorno**:
 
 ```json
 {
-  "qrCodeString": "51101547081",
+  "qrCodeString": "$2a$10$fIxPB0Ls3c2U.JzH/VyDs.D1A58JdC5BGQeRTeeEWYDDCJQeJSoiq",
 }
 ```
+
+**Dica**: você pode utilizar a função core do Node.js `JSON.stringfy` para transformar o corpo da requisição(JSON) em uma string.
+**Dica**: você pode utilizar a lib `bcryptjs` para codificar uma string.
+
+
+## Especificação dos testes
+
+Em cada teste, tem uma breve descrição no que sua aplicação deve cumprir para que o teste passe.
+
+Para esse desafio temos os seguintes testes:
+
+- **`should be able to generate a new qrcode`**: Para que esse teste passe, sua aplicação deve permitir que uma transação seja criada, e retorne um json com a string do qrcode.
+
